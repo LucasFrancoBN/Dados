@@ -14,7 +14,7 @@
 <!-- FOTOS -->
 <div id="fotos">
     <h2> 📸 Fotos </h2>
-        <img src="./Readme-imgs/" alt="" style="width:750px">
+        <img src="./Readme-imgs/dados.jpg" alt="" style="width:750px">
         <br><br>
 
 <!-- SOBRE -->
