@@ -12,6 +12,16 @@ async function handleData() {
   const datas = await fetchDatas<Sell>();
   if (datas) {
     const dataNormalizedKeys = normalizedKeys(datas);
+    const statis = new Statistics(dataNormalizedKeys);
+    if (total) {
+      total.innerText += ` ${statis.total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      })}`;
+    }
+    fillList(statis.payments, "payments");
+    fillList(statis.infoPayments, "infoPayments");
+    if (bestDayElement) bestDayElement.innerText += ` ${statis.bestDay[0]}`;
     if (tableBody) {
       tableBody.innerHTML = dataNormalizedKeys
         .map((data) => {
@@ -27,21 +37,6 @@ async function handleData() {
         })
         .join(" ");
     }
-  }
-
-  if (datas) {
-    const dataNormalizedKeys = normalizedKeys(datas);
-    const statis = new Statistics(dataNormalizedKeys);
-    if (total) {
-      total.innerText += ` ${statis.total.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL",
-      })}`;
-    }
-    fillList(statis.payments, "payments");
-    fillList(statis.infoPayments, "infoPayments");
-    if (bestDayElement) bestDayElement.innerText += ` ${statis.bestDay[0]}`;
-    console.log(statis.bestDay[0]);
   }
 }
 handleData();
