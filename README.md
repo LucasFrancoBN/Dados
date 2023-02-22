@@ -21,6 +21,7 @@
 <div id="sobre">
     <h2> 📝 Sobre o Projeto </h2> 
     <p> Projeto feito para lidar com a requisição de dados de uma API. Durante o projeto, foram criados tipos e interfaces, houve a normalização das chaves da API, conversão de string para data e diversas outras funcionalidades envolvendo o uso do TypeScript.</p>
+     <h3 align="center">Link do Projeto <a href="https://lucasfrancobn.github.io/Dados/dist/index.html">CLIQUE AQUI</a></h3>
 </div>
 <br>
 
